@@ -16,6 +16,9 @@ ScrollTrigger.config({
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
+    // Handle video loading errors gracefully
+    initVideoErrorHandling();
+
     if (prefersReducedMotion.matches) {
         initReducedMotionFallback();
         return;
@@ -31,6 +34,39 @@ document.addEventListener('DOMContentLoaded', function() {
     initCounterAnimation();
     initChartAnimation();
 });
+
+/* =============================================
+   Video Error Handling
+   ============================================= */
+function initVideoErrorHandling() {
+    const heroVideo = document.querySelector('.hero-video');
+    if (!heroVideo) return;
+
+    // Handle video loading errors
+    heroVideo.addEventListener('error', function() {
+        console.log('Hero video failed to load, using image fallback');
+        heroVideo.style.display = 'none';
+    });
+
+    // Also check if video fails to play
+    heroVideo.addEventListener('stalled', function() {
+        console.log('Hero video stalled, using image fallback');
+        heroVideo.style.display = 'none';
+    });
+
+    // Hide video if it fails to load within 5 seconds
+    const videoTimeout = setTimeout(function() {
+        if (heroVideo.readyState < 2) {
+            console.log('Hero video loading too slow, using image fallback');
+            heroVideo.style.display = 'none';
+        }
+    }, 5000);
+
+    // Clear timeout if video loads successfully
+    heroVideo.addEventListener('canplay', function() {
+        clearTimeout(videoTimeout);
+    });
+}
 
 // Listen for reduced motion changes
 prefersReducedMotion.addEventListener('change', handleReducedMotionChange);

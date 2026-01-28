@@ -438,7 +438,7 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
 }
 
-/* Fallback for when video doesn't load - uses poster image */
+/* Fallback background image (shows when video is loading or fails) */
 .hero-media-bg::before {
     content: '';
     position: absolute;
@@ -449,7 +449,12 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    z-index: 0;
+}
+
+/* Video sits on top of fallback image */
+.hero-video {
+    z-index: 1;
 }
 
 /* Semi-transparent overlay for text readability */
