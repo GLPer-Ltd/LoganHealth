@@ -58,6 +58,7 @@ function initQuestionnaire() {
     initNavigationButtons();
     initConditionalFields();
     initConditionsCheckbox();
+    initPaymentButtons();
 }
 
 /* =============================================
@@ -699,11 +700,7 @@ function showResults() {
     if (questionnaireState.eligible) {
         eligibleResult.style.display = 'block';
         notEligibleResult.style.display = 'none';
-
-        // Initialize Calendly if available
-        if (window.Calendly) {
-            // Calendly will auto-initialize with the inline widget
-        }
+        // Payment options are shown instead of direct Calendly booking
     } else {
         eligibleResult.style.display = 'none';
         notEligibleResult.style.display = 'block';
@@ -715,6 +712,66 @@ function showResults() {
 
     // Scroll to results
     resultContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* =============================================
+   Payment Button Handlers
+   ============================================= */
+// JotForm URLs
+const JOTFORM_URLS = {
+    'one-off': 'https://pci.jotform.com/form/260355646726059',
+    'subscription': 'https://pci.jotform.com/form/260355571683058'
+};
+
+function initPaymentButtons() {
+    const oneOffBtn = document.getElementById('oneOffPaymentBtn');
+    const subscriptionBtn = document.getElementById('subscriptionPaymentBtn');
+
+    if (oneOffBtn) {
+        oneOffBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            handlePaymentSelection('one-off');
+        });
+    }
+
+    if (subscriptionBtn) {
+        subscriptionBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            handlePaymentSelection('subscription');
+        });
+    }
+}
+
+function handlePaymentSelection(paymentType) {
+    const jotformUrl = JOTFORM_URLS[paymentType];
+
+    if (!jotformUrl || jotformUrl.includes('YOUR_')) {
+        console.warn('JotForm URL not configured for:', paymentType);
+        alert('Payment form is being set up. Please contact us directly to proceed.');
+        return;
+    }
+
+    // Build URL with prefilled data from questionnaire
+    const userData = questionnaireState.data;
+    const params = new URLSearchParams();
+
+    // Prefill user data if available (field names depend on JotForm setup)
+    if (userData.fullName) {
+        params.set('name', userData.fullName);
+    }
+    if (userData.email) {
+        params.set('email', userData.email);
+    }
+
+    // Add payment type identifier
+    params.set('paymentType', paymentType);
+
+    const finalUrl = params.toString()
+        ? `${jotformUrl}?${params.toString()}`
+        : jotformUrl;
+
+    // Redirect to JotForm
+    window.location.href = finalUrl;
 }
 
 /* =============================================

@@ -1328,11 +1328,91 @@
                             <h3 class="result-title">Great News!</h3>
                             <p class="result-message">Based on your responses, you may be eligible for GLP-1 treatment. Book a consultation with our pharmacist to discuss your personalised treatment plan.</p>
 
-                            <div class="booking-section" id="bookingSection">
-                                <h4>Book Your Consultation</h4>
-                                <p>Select a convenient time for your consultation with our pharmacist.</p>
-                                <!-- Calendly inline widget will be embedded here -->
-                                <div class="calendly-inline-widget" data-url="https://calendly.com/peter-glper/30min" style="min-width:320px;height:630px;"></div>
+                            <!-- Payment Choice Section -->
+                            <div class="payment-choice-section" id="paymentChoiceSection">
+                                <h4>Choose Your Plan</h4>
+                                <p>Select your preferred payment option to proceed with your GLP-1 treatment.</p>
+
+                                <div class="payment-options">
+                                    <!-- One-off Payment Option -->
+                                    <div class="payment-option">
+                                        <div class="payment-option-header">
+                                            <h5>One-Time Purchase</h5>
+                                            <span class="payment-badge">Single Order</span>
+                                        </div>
+                                        <p class="payment-description">Perfect if you want to try treatment first or prefer flexibility.</p>
+                                        <ul class="payment-features">
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <path d="M13.333 4L6 11.333L2.667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                One month's medication supply
+                                            </li>
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <path d="M13.333 4L6 11.333L2.667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                Pharmacist consultation included
+                                            </li>
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <path d="M13.333 4L6 11.333L2.667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                No commitment required
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn btn-outline btn-block payment-btn" id="oneOffPaymentBtn" data-payment-type="one-off">
+                                            Select One-Time
+                                        </a>
+                                    </div>
+
+                                    <!-- Subscription Payment Option -->
+                                    <div class="payment-option featured">
+                                        <div class="payment-option-header">
+                                            <h5>Monthly Subscription</h5>
+                                            <span class="payment-badge popular">Most Popular</span>
+                                        </div>
+                                        <p class="payment-description">Best value for your weight loss journey with ongoing support.</p>
+                                        <ul class="payment-features">
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <path d="M13.333 4L6 11.333L2.667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                Monthly medication delivery
+                                            </li>
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <path d="M13.333 4L6 11.333L2.667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                Ongoing pharmacist support
+                                            </li>
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <path d="M13.333 4L6 11.333L2.667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                Cancel anytime
+                                            </li>
+                                            <li>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                    <path d="M13.333 4L6 11.333L2.667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <strong>Save 10% vs one-time</strong>
+                                            </li>
+                                        </ul>
+                                        <a href="#" class="btn btn-primary btn-block payment-btn" id="subscriptionPaymentBtn" data-payment-type="subscription">
+                                            Select Monthly
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <p class="payment-note">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M8 5V8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        <circle cx="8" cy="11" r="0.75" fill="currentColor"/>
+                                    </svg>
+                                    After payment, you'll receive an email with a link to book your optional consultation.
+                                </p>
                             </div>
                         </div>
 
