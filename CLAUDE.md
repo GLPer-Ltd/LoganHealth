@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static HTML/CSS/JS website for Logan Health's GLP-1 weight loss treatment service. Hosted on GitHub Pages at https://glper-ltd.github.io/LoganHealth/
+Static HTML/CSS/JS website for Logan Health's GLP-1 weight loss treatment service. Hosted at https://loganhealth.co.uk/
 
 Developed mobile first to support mobile devices such as phones, tablets but also desktop screens.
 
@@ -117,7 +117,7 @@ Payment is required before booking a consultation. The flow uses JotForm + Squar
 - Hidden field `paymentType` = "one-off" or "subscription"
 - Square payment integration
 - Webhook to Worker: `https://loganhealth-payments.misty-heart-ac54.workers.dev/api/webhook`
-- Redirect to: `https://glper-ltd.github.io/LoganHealth/payment-success.html`
+- Redirect to: `https://loganhealth.co.uk/payment-success.html`
 
 ### Static Site Payment Files
 
