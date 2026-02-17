@@ -3283,3 +3283,65 @@ a.blog-card {
     margin-bottom: var(--space-1);
     font-style: italic;
 }
+
+/* What You Get / Included section */
+.what-you-get {
+    background: var(--color-bg);
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+}
+
+.included-item {
+    text-align: center;
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    background: white;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.included-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.included-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-lg);
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-4);
+}
+
+.included-item h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-2);
+    color: var(--color-text);
+}
+
+.included-item p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+    .included-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .included-item {
+        padding: var(--space-4);
+    }
+}

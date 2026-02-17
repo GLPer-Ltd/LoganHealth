@@ -103,6 +103,7 @@ function setInitialStates() {
         '.step-connector',
         '.treatment-card',
         '.testimonial-card',
+        '.included-item',
         '.story-card',
         '.faq-item',
         '.blog-card',
@@ -138,6 +139,7 @@ function initReducedMotionFallback() {
         '.step-connector',
         '.treatment-card',
         '.testimonial-card',
+        '.included-item',
         '.story-card',
         '.faq-item',
         '.blog-card',
@@ -298,6 +300,22 @@ function initScrollReveal() {
             scrollTrigger: {
                 trigger: stepsCta,
                 start: 'top 85%'
+            }
+        });
+    }
+
+    // What You Get section
+    const includedGrid = document.querySelector('.included-grid');
+    if (includedGrid) {
+        gsap.to('.included-item', {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: includedGrid,
+                start: 'top 80%'
             }
         });
     }
