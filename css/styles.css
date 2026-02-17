@@ -3289,23 +3289,13 @@ a.blog-card {
 
 /* What You Get / Included section */
 .section.what-you-get {
-    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
-    position: relative;
-    overflow: hidden;
-}
-
-.what-you-get::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
-    pointer-events: none;
+    background: linear-gradient(135deg, var(--color-bg-dark) 0%, #1E293B 100%);
+    color: var(--color-white);
 }
 
 .what-you-get .section-tag {
-    background: rgba(255, 255, 255, 0.15);
-    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-primary-light);
 }
 
 .what-you-get .section-title {
@@ -3313,7 +3303,7 @@ a.blog-card {
 }
 
 .what-you-get .section-subtitle {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .included-grid {
