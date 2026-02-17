@@ -91,7 +91,7 @@ function setInitialStates() {
         '.hero-subtitle',
         '.hero-cta .btn',
         '.trust-badge',
-        '.hero-stat-card'
+        '.hero-tile'
     ], {
         opacity: 0
     });
@@ -133,7 +133,7 @@ function initReducedMotionFallback() {
         '.hero-subtitle',
         '.hero-cta .btn',
         '.trust-badge',
-        '.hero-stat-card',
+        '.hero-tile',
         '.section-header',
         '.step-card',
         '.step-connector',
@@ -227,8 +227,8 @@ function initHeroAnimation() {
             stagger: 0.1,
             duration: 0.4
         }, '-=0.2')
-        // Stat cards with bounce effect
-        .to('.hero-stat-card', {
+        // Hero tiles with bounce effect
+        .to('.hero-tile', {
             opacity: 1,
             scale: 1,
             stagger: 0.1,
@@ -236,8 +236,8 @@ function initHeroAnimation() {
             ease: 'back.out(1.7)'
         }, '-=0.3');
 
-    // Set initial scale for stat cards
-    gsap.set('.hero-stat-card', { scale: 0.8 });
+    // Set initial scale for hero tiles
+    gsap.set('.hero-tile', { scale: 0.8 });
 }
 
 /* =============================================
@@ -581,8 +581,8 @@ function initParallax() {
         });
     }
 
-    // Stat cards subtle float on scroll
-    gsap.utils.toArray('.hero-stat-card').forEach((card, i) => {
+    // Hero tiles subtle float on scroll
+    gsap.utils.toArray('.hero-tile').forEach((card, i) => {
         gsap.to(card, {
             y: -10 - (i * 5),
             ease: 'none',

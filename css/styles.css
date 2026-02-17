@@ -3267,20 +3267,20 @@ a.blog-card {
     font-size: var(--font-size-xs);
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    margin-top: var(--space-3);
+    margin-top: var(--spacing-3);
     font-style: italic;
 }
 
 .treatment-footnotes {
-    margin-top: var(--space-6);
-    padding-top: var(--space-4);
+    margin-top: var(--spacing-6);
+    padding-top: var(--spacing-4);
     border-top: 1px solid var(--color-border);
 }
 
 .treatment-footnotes p {
     font-size: var(--font-size-xs);
     color: var(--color-text-light);
-    margin-bottom: var(--space-1);
+    margin-bottom: var(--spacing-1);
     font-style: italic;
 }
 
@@ -3292,13 +3292,13 @@ a.blog-card {
 .included-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-6);
-    margin-top: var(--space-8);
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-8);
 }
 
 .included-item {
     text-align: center;
-    padding: var(--space-6);
+    padding: var(--spacing-6);
     border-radius: var(--radius-xl);
     background: white;
     box-shadow: var(--shadow-sm);
@@ -3319,13 +3319,13 @@ a.blog-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto var(--space-4);
+    margin: 0 auto var(--spacing-4);
 }
 
 .included-item h3 {
     font-size: var(--font-size-lg);
     font-weight: 700;
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--spacing-2);
     color: var(--color-text);
 }
 
@@ -3338,11 +3338,11 @@ a.blog-card {
 @media (max-width: 640px) {
     .included-grid {
         grid-template-columns: 1fr;
-        gap: var(--space-4);
+        gap: var(--spacing-4);
     }
 
     .included-item {
-        padding: var(--space-4);
+        padding: var(--spacing-4);
     }
 }
 
@@ -3350,7 +3350,7 @@ a.blog-card {
 .hero-tiles-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
+    gap: var(--spacing-4);
     max-width: 440px;
 }
 
@@ -3379,7 +3379,7 @@ a.blog-card {
     justify-content: center;
     height: 100%;
     color: var(--color-primary);
-    gap: var(--space-2);
+    gap: var(--spacing-2);
     font-size: var(--font-size-sm);
     font-weight: 600;
 }
@@ -3389,7 +3389,7 @@ a.blog-card {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: var(--space-2) var(--space-3);
+    padding: var(--spacing-2) var(--spacing-3);
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
     color: white;
     font-size: var(--font-size-sm);
@@ -3406,7 +3406,7 @@ a.blog-card {
 
 .established-content {
     text-align: center;
-    padding: var(--space-4);
+    padding: var(--spacing-4);
     color: var(--color-primary);
 }
 
@@ -3414,7 +3414,7 @@ a.blog-card {
     display: block;
     font-size: var(--font-size-2xl);
     font-weight: 800;
-    margin-top: var(--space-2);
+    margin-top: var(--spacing-2);
     color: var(--color-primary);
 }
 
@@ -3422,13 +3422,13 @@ a.blog-card {
     display: block;
     font-size: var(--font-size-sm);
     color: var(--color-text-light);
-    margin-top: var(--space-1);
+    margin-top: var(--spacing-1);
 }
 
 @media (max-width: 968px) {
     .hero-tiles-grid {
         max-width: 340px;
-        gap: var(--space-3);
+        gap: var(--spacing-3);
     }
 }
 
@@ -3436,7 +3436,7 @@ a.blog-card {
 .review-banner {
     background: var(--color-primary);
     color: white;
-    padding: var(--space-2) var(--space-4);
+    padding: var(--spacing-2) var(--spacing-4);
     text-align: center;
     font-size: var(--font-size-sm);
     position: relative;
@@ -3448,7 +3448,7 @@ a.blog-card {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--space-3);
+    gap: var(--spacing-3);
 }
 
 .review-banner-stars {
@@ -3465,12 +3465,12 @@ a.blog-card {
 .review-source {
     font-size: var(--font-size-xs);
     color: var(--color-text-light);
-    margin-left: var(--space-2);
+    margin-left: var(--spacing-2);
 }
 
 @media (max-width: 640px) {
     .review-banner-content {
         flex-direction: column;
-        gap: var(--space-1);
+        gap: var(--spacing-1);
     }
 }
