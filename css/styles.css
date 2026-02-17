@@ -3431,3 +3431,46 @@ a.blog-card {
         gap: var(--space-3);
     }
 }
+
+/* Rotating Review Banner */
+.review-banner {
+    background: var(--color-primary);
+    color: white;
+    padding: var(--space-2) var(--space-4);
+    text-align: center;
+    font-size: var(--font-size-sm);
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.review-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+}
+
+.review-banner-stars {
+    display: flex;
+    gap: 2px;
+    flex-shrink: 0;
+}
+
+.review-banner-text {
+    font-style: italic;
+    transition: opacity 0.5s ease;
+}
+
+.review-source {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+    margin-left: var(--space-2);
+}
+
+@media (max-width: 640px) {
+    .review-banner-content {
+        flex-direction: column;
+        gap: var(--space-1);
+    }
+}

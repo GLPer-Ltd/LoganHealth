@@ -172,3 +172,28 @@ window.utils = {
     isValidEmail,
     isValidUKPhone
 };
+
+// Rotating review banner
+(function initReviewBanner() {
+    var reviews = [
+        '"Amazing service from the pharmacy team!" — Google Review',
+        '"Couldn\'t recommend this pharmacy more highly!" — Google Review',
+        '"Always friendly and professional. 5 stars!" — Google Review',
+        '"The best pharmacy in the area, hands down." — Google Review'
+    ];
+    // PLACEHOLDER: Replace above with real Google reviews from P E Logan Pharmacy
+
+    var bannerText = document.getElementById('reviewBannerText');
+    if (!bannerText || reviews.length === 0) return;
+
+    var currentIndex = 0;
+
+    setInterval(function() {
+        bannerText.style.opacity = '0';
+        setTimeout(function() {
+            currentIndex = (currentIndex + 1) % reviews.length;
+            bannerText.textContent = reviews[currentIndex];
+            bannerText.style.opacity = '1';
+        }, 500);
+    }, 5000);
+})();
